@@ -1,3 +1,4 @@
+/* vista de home */
 * {
   box-sizing: border-box;
   margin: 0 ;
@@ -8,10 +9,11 @@
 .botonera {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
   position: fixed;
-  width: 100%;
   flex-wrap: wrap;
+  z-index: 1;
+
 }
 .botonera a {
   font-size: 30px;
@@ -25,10 +27,18 @@
   border-radius: 50%;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.header-nav {
+  display: none;
+}
 .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 header {
   width: 100%;
@@ -37,11 +47,14 @@ header {
 .titulo {
   font-family: Pacifico,sans-serif;
   padding-left: 5px;
+  text-align: left;
+  display: inline;
 }
 .articulo {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   margin-bottom: 30px;
+  width: 100%;
 }
 .cart {
   position: absolute;
@@ -56,7 +69,7 @@ header {
 .img-article {
   width: 100%;
 }
-.article-desc {
+.article-footer {
   display: flex;
   justify-content: space-between;
   width: 90%;
@@ -70,7 +83,7 @@ h2 {
   margin: 10px 0 10px 10px;
   font-family: 'Manjari';
 }
-.desc p {
+p {
   font-family: 'Roboto Slab';
   width: 80%;
   margin: 0 auto;
@@ -80,12 +93,198 @@ footer {
   width: 100%;
   height: 100px;
 }
+/* fin de vista de home */
 
+
+/* Vista de producto */
+  .article-add-cart {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    padding: 5px;
+    width: 80%;
+    margin: 0 auto;
+    color: #FFF;
+    border-radius: 20px;
+    background-color: #000;
+    margin-top: 20px;
+  }
+
+  .article-add-cart h5{
+    color: #FFF;
+  }
+/* fin de vista de producto */
+
+
+/* vista de carrito */
+/* fin de vista de carrito */
+
+
+/* formulario de registro */
+/* fin de formulario de registro */
+
+
+/* formulario de login */
+/* fin de formulario de login */
+
+
+/* formulario de contacto */
+/* fin de formulario de contacto */
+
+
+/* vista de preguntas frecuentes */
+/* fin vista de preguntas frecuentes */
+
+
+/* vista de perfil de usuario */
+/* fin de vista de perfil de usuario */
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    /*Tablet */
+/* TABLET */
+/* vista de home */
+  .articulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+  }
+  .articulo {
+    width: 40%;
+  }
+  .titulo {
+    font-size: 50px;
+    text-align: center;
+  }
+  .botonera a {
+    font-size: 35px;
+    width: 70px;
+    height: 70px;
+  }
+  .cart {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  .mapa {
+    height: 350px;
+  }
+
+/* fin de vista de home */
+
+
+/* Vista de producto */
+/* fin de vista de producto */
+
+/* vista de carrito */
+/* fin de vista de carrito */
+
+
+/* formulario de registro */
+/* fin de formulario de registro */
+
+
+/* formulario de login */
+/* fin de formulario de login */
+
+
+/* formulario de contacto */
+/* fin de formulario de contacto */
+
+
+/* vista de preguntas frecuentes */
+/* fin vista de preguntas frecuentes */
+
+
+/* vista de perfil de usuario */
+/* fin de vista de perfil de usuario */
 }
 
-@media only screen and (min-width: 1224px) {
-  /* Desktop */
+@media only screen and (min-width: 1024px) {
+/* DESKTOP */
+/* vista de home */
+  .articulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around ;
+  }
+  .articulo {
+    width: 20%;
+  }
+  .titulo {
+    font-size: 50px;
+    text-align: left;
+    width: 10%;
+    display: block;
+  }
+  .botonera  {
+    display: none;
+  }
+  .cart {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  .mapa {
+    height: 350px;
+  }
+  .header-nav{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header-nav li {
+    display: block;
+  }
+  header {
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    background-color: #FFF;
+    justify-content: space-between;
+  }
+  main {
+    margin-top: 110px;
+  }
+  .header-nav li a {
+    font-family: Manjari;
+    font-size: 30px;
+  }
+  .img-user {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .mapa {
+    height: 600px;
+  }
+/* fin de vista de home */
+
+
+/* Vista de producto */
+/* fin de vista de producto */
+
+/* vista de carrito */
+/* fin de vista de carrito */
+
+
+/* formulario de registro */
+/* fin de formulario de registro */
+
+
+/* formulario de login */
+/* fin de formulario de login */
+
+
+/* formulario de contacto */
+/* fin de formulario de contacto */
+
+
+/* vista de preguntas frecuentes */
+/* fin vista de preguntas frecuentes */
+
+
+/* vista de perfil de usuario */
+/* fin de vista de perfil de usuario */
 }
