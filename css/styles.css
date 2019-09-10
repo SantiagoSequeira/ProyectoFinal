@@ -93,11 +93,14 @@ footer {
   width: 100%;
   height: 100px;
 }
+.articulo-imagen {
+  position: relative;
+}
 /* fin de vista de home */
 
 
 /* Vista de producto */
-  .article-add-cart {
+  /* .article-add-cart {
     display: flex;
     justify-content: center;
     font-size: 20px;
@@ -110,9 +113,19 @@ footer {
     margin-top: 20px;
   }
 
-  .article-add-cart h5{
-    color: #FFF;
+  .article-desc {
+    margin-left: 10px;
   }
+  h5 {
+    color: #FFF;
+    font-family: 'Roboto Slab';
+  }
+  h6 {
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: center;
+    font-family: Manjari,sans-serif;
+  } */
 /* fin de vista de producto */
 
 
@@ -173,6 +186,24 @@ footer {
 
 
 /* Vista de producto */
+  /* .articulo-single {
+    width: 98%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .articulo-img-single {
+    width: 49%;
+  }
+  .articulo-single-desc {
+    width: 49%;
+  }
+  .article-footer {
+    text-align: center;
+  }
+  h4 {
+    margin: 30px 0 10px 30px;
+  } */
 /* fin de vista de producto */
 
 /* vista de carrito */
