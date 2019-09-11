@@ -3,7 +3,6 @@
   box-sizing: border-box;
   margin: 0 ;
   padding: 0px;
-  color: #000;
   text-decoration: none;
   list-style-type: none;
 }
@@ -14,6 +13,7 @@
   position: fixed;
   flex-wrap: wrap;
   z-index: 1;
+  margin-top: 50px;
 }
 .botonera a {
   font-size: 30px;
@@ -27,18 +27,26 @@
   border-radius: 50%;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+a {
+  color: #000;
+}
 .header-nav {
   display: none;
+}
+main {
+  width: 100%;
 }
 .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 100%;
 }
-main {
+nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  width: 100%;
 }
 header {
   width: 100%;
@@ -48,7 +56,8 @@ header {
   font-family: Pacifico,sans-serif;
   padding-left: 5px;
   text-align: left;
-  display: inline;
+  width: 100%;
+  font-size: 35px;
 }
 .articulo {
   position: relative;
@@ -82,6 +91,14 @@ h4 {
 h2 {
   margin: 10px 0 10px 10px;
   font-family: 'Manjari';
+}
+h3 {
+  font-family: 'Manjari';
+  font-size: 35px;
+}
+h5 {
+  font-family: 'Manjari',sans-serif;
+
 }
 p {
   font-family: 'Roboto Slab';
@@ -131,18 +148,36 @@ footer {
 
 
 /* Vista de producto */
-  /* .article-add-cart {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    padding: 5px;
-    width: 80%;
-    margin: 0 auto;
-    color: #FFF;
-    border-radius: 20px;
-    background-color: #000;
-    margin-top: 20px;
-  }
+.img-producto {
+  width: 100%;
+}
+.descripcion-producto {
+
+}
+.producto {
+
+}
+.price {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.add-cart {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 20px;
+  background-color: #000;
+  margin-top: 20px;
+}
+.descripcion-producto a{
+  color: #FFF;
+
+}
+  /*
 
   .article-desc {
     margin-left: 10px;
@@ -161,6 +196,62 @@ footer {
 
 
 /* vista de carrito */
+
+.item-cart {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.item-cart-img {
+  width: 80px;
+}
+.line{
+  width: 90%;
+  margin: 0 auto;
+}
+/*
+
+POP UP CON JAVASCRIPT
+
+.pop-up{
+  display: none;
+  position: absolute;
+  align-items: center;
+  width: 100%;
+  left: 0px;
+  top: 0;
+  height: 100%;
+  z-index: 3;
+
+}
+
+.menu {
+  height: 50%;
+  background-color: #FFF;
+  width: 100%;
+}
+.close {
+  font-size: 40px;
+  text-align: right;
+}
+.menu-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.cantidad {
+  font-size: 30px;
+}
+.menu-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+.trash {
+  font-size: 40px;
+  font-family: 'Manjari';
+} */
+
+
 /* fin de vista de carrito */
 
 
@@ -227,6 +318,16 @@ footer {
 
 
 /* Vista de producto */
+.product-container {
+  display: flex;
+}
+.descripcion-producto {
+   width: 50%;
+   font-size: 20px;
+}
+.producto {
+  width: 50%;
+}
   /* .articulo-single {
     width: 98%;
     display: flex;
@@ -283,10 +384,11 @@ footer {
     width: 20%;
   }
   .titulo {
-    font-size: 50px;
-    text-align: left;
-    width: 10%;
-    display: block;
+    font-size: 25px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .botonera  {
     display: none;
@@ -335,6 +437,15 @@ footer {
 
 
 /* Vista de producto */
+.descripcion-producto {
+   font-size: 30px;
+}
+.price {
+  font-size: 50px;
+}
+.add-cart {
+  font-size: 30px;
+}
 /* fin de vista de producto */
 
 /* vista de carrito */
