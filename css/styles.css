@@ -257,7 +257,7 @@ POP UP CON JAVASCRIPT
 
 /* formulario de registro */
 .form-register {
-width: 400px;
+width: 100%;
 background-color: #24303c;
 padding: 30px;
 margin: auto;
@@ -311,7 +311,7 @@ box-shadow: 7px 13px 37px #000;
 
 /* formulario de login */
 .form-login {
-width: 400px;
+width: 100%;
 background-color: #24303c;
 padding: 30px;
 margin: auto;
@@ -654,7 +654,7 @@ box-shadow: 7px 13px 37px #000;
 
 /* formulario de registro */
 .form-register {
-width: 800px;
+width: 80%;
 background-color: #24303c;
 padding: 60px;
 margin: auto;
@@ -708,7 +708,7 @@ box-shadow: 14px 26px 74px #000;
 
 /* formulario de login */
 .form-login {
-width: 800px;
+width: 80%;
 background-color: #24303c;
 padding: 60px;
 margin: auto;
