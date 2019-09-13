@@ -168,6 +168,7 @@ input[type=checkbox] {
   margin-top: 30px;
 }
 .add-cart {
+  color: #FFF;
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -177,6 +178,9 @@ input[type=checkbox] {
   border-radius: 20px;
   background-color: #000;
   margin-top: 20px;
+}
+.finish-cart {
+  background-color: #4682B4;
 }
 .descripcion-producto a{
   color: #FFF;
@@ -349,6 +353,60 @@ box-shadow: 7px 13px 37px #000;
 
 
 /* formulario de contacto */
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-text {
+  display: block;
+  margin-top: 0.25rem;
+}
+.text-muted {
+  color: #6c757d !important;
+}
+.form-check-label {
+  margin-bottom: 0;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.contact-form {
+  width: 95%;
+  margin: 0 auto;
+}
 /* fin de formulario de contacto */
 
 
@@ -573,6 +631,15 @@ width: 70%;
 .add-cart {
   font-size: 30px;
 }
+.producto {
+  width: 50%;
+}
+.product-container {
+  display: flex;
+}
+.descripcion-producto {
+  width: 50%;
+}
 /* fin de vista de producto */
 
 /* vista de carrito */
@@ -644,6 +711,10 @@ margin: 0 auto;
 
 
 /* formulario de contacto */
+.contact-form {
+  width: 60%;
+  margin: 80px auto;
+ }
 /* fin de formulario de contacto */
 
 
