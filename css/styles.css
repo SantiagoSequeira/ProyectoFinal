@@ -145,9 +145,10 @@ footer {
   padding: 10px;
 }
 input[type=checkbox] {
-    transform: scale(1.5);
+     transform: scale(1.5);
     margin-right: 10px;
 }
+
 
 /* fin de vista de home */
 
@@ -184,8 +185,13 @@ input[type=checkbox] {
 }
 .descripcion-producto a{
   color: #FFF;
-
 }
+.testq {
+  display: none;
+}
+
+
+
   /*
 
   .article-desc {
@@ -422,7 +428,6 @@ box-shadow: 7px 13px 37px #000;
   font-family: 'calibrí';
   font-size: 30px;
   text-align: center;
-  background-color: #B1AEAC;
 }
 .hquestions {
   text-align: center;
@@ -550,7 +555,7 @@ box-shadow: 7px 13px 37px #000;
 }
 /* fin de vista de perfil de usuario */
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 768px) {
 /* TABLET */
 /* vista de home */
   .articulos {
@@ -690,25 +695,16 @@ width: 70%;
   margin: 40px 0;
 }
 .faqmenu {
-  display: flex;
-  flex-direction: column;
-  font-family: 'calibrí';
   font-size: 50px;
-  text-align: center;
-  background-color: #B1AEAC;
-  margin: 40px 0;
 }
 .hquestions {
-  text-align: center;
   margin: 30px 0;
 }
 #Q1 {
-  text-align: center;
   margin: 30px 0;
   font-size: 60px;
 }
 #Q2 {
-  text-align: center;
   margin: 30px 0;
   font-size: 60px;
 }
@@ -897,6 +893,11 @@ width: 70%;
   .mapa {
     height: 600px;
   }
+  input[type=checkbox] {
+       transform: scale(3);
+      margin-right: 10px;
+  }
+
 /* fin de vista de home */
 
 
@@ -1081,17 +1082,11 @@ margin: 0 auto;
   margin: 40px 0;
 }
 .faqmenu {
-  display: flex;
-  flex-direction: column;
-  font-family: 'calibrí';
   font-size: 50px;
-  text-align: center;
-  background-color: #B1AEAC;
-  margin: 40px 0;
 }
 .hquestions {
   text-align: center;
-  margin: 30px 0;
+  margin: 60px 0;
   overflow: hidden;
 }
 #Q1 {
@@ -1134,9 +1129,7 @@ margin: 0 auto;
   margin: 30px 0;
   font-size: 60px;
 }
-.hquestions p {
-  font-size: 36px;
-}
+
 /* fin vista de preguntas frecuentes */
 
 
@@ -1152,5 +1145,9 @@ margin: 0 auto;
 }
 .perfilBasico {
   background-color: #B1AEAC;
+}
+.profile {
+  margin-top: 100px;
+  }
 }
 /* fin de vista de perfil de usuario */
