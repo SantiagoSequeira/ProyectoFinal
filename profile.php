@@ -1,21 +1,15 @@
-<?php require_once("./header.php"); ?>
+<?php
+  require_once("functions.php");
+  if (!issetUser()){
+    redir("login");
+  }
+  require_once("header.php");
+  $pagina = "profile";
+?>
 <body>
   <div class="container">
     <header>
-      <nav>
-        <h1 class="titulo"><a href="index.html">My e-commerce</a></h1>
-        <ul class="header-nav">
-          <li><a href="cart.html">Carrito</a></li>
-          <li><a href="faq.html">F.A.Q</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="">Logout</a></li>
-        </ul>
-        <div class="botonera">
-          <a href=""><ion-icon name="menu"></ion-icon></a>
-          <a href="cart.html"><ion-icon name="cart"></ion-icon></a>
-          <a href="index.html"><ion-icon name="home"></ion-icon></a>
-        </div>
-        </nav>
+      <?php include_once("menu.php"); ?>
     </header>
       <div class="profile">
         <h2 >Mi Perfil</h1>

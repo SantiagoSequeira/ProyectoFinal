@@ -100,10 +100,11 @@ h5 {
   font-family: 'Manjari',sans-serif;
 
 }
-p {
-  font-family: 'Roboto Slab';
-  width: 90%;
-  margin: 0 auto;
+.ph {
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+  color: white;
 }
 footer {
   margin-top: 40px;
@@ -332,12 +333,7 @@ box-shadow: 7px 13px 37px #000;
   font-size: 18px;
   color: black;
 }
-.form-login p {
-  text-align: center;
-  font-size: 18px;
-  line-height: 40px;
-  color: white;
-}
+
 .form-login a {
   color: white;
   text-decoration: none;
@@ -645,12 +641,6 @@ margin-top: 15px;
 }
 .controls {
 
-}
-.form-register p {
-  text-align: center;
-  font-size: 18px;
-  line-height: 40px;
-  color: white;
 }
 .form-register a {
 

@@ -1,22 +1,11 @@
-<?php require_once("./header.php"); ?>
+<?php
+  require_once("header.php");
+  $pagina = "faq";
+?>
 <body>
   <div class="container">
     <header>
-      <nav>
-        <h1 class="titulo"><a href="index.html">My e-commerce</a></h1>
-        <ul class="header-nav">
-          <li><a href="cart.html">Carrito</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="profile.html"><img src="img/foto-entradas.jpg" alt="" class="img-user"></a></li>
-        </ul>
-        <div class="botonera">
-          <a href=""><ion-icon name="menu"></ion-icon></a>
-          <a href="profile.html"><ion-icon name="person"></ion-icon></a>
-          <a href="cart.html"><ion-icon name="cart"></ion-icon></a>
-        </div>
-        </nav>
+      <?php include_once("menu.php"); ?>
     </header>
     <section>
       <div class="faqtitulo">
