@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Manjari|Pacifico|Roboto+Slab&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>MyEcommerce</title>
-</head>
+<?php require_once("./header.php"); ?>
 <body>
   <div class="container">
     <header>
@@ -64,18 +55,4 @@
     </div>
    </div>
     </section>
-
-    <footer>
-     <div class="pie-pagina">
-        <ul class="footer-ul">
-          <li><a href="" class="footer-boton"><ion-icon name="logo-facebook"></a></ion-icon></li>
-          <li><a href="" class="footer-boton"><ion-icon name="logo-instagram"></a></ion-icon></li>
-          <li><a href="" class="footer-boton"><ion-icon name="mail"></ion-icon></a></li>
-          <li><a href="" class="footer-boton"><ion-icon name="call"></ion-icon></a></li>
-        </ul>
-      </div>
-    </footer>
-  </div>
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-  </body>
-</html>
+<?php require_once("./footer.php"); ?>

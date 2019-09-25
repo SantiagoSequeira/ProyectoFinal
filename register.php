@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Manjari|Pacifico|Roboto+Slab&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="css/styles.css">
-    <title>MyEcommerce</title>
-  </head>
+<?php require_once("./header.php"); ?>
   <body>
     <div class="container">
       <header>
@@ -37,19 +28,4 @@
             <a href="login.html">You already have an account?</a></p>
         </div>
       </main>
-      <footer>
-
-        <div class="pie-pagina">
-          <ul class="footer-ul">
-            <li><a href="" class="footer-boton"><ion-icon name="logo-facebook"></ion-icon></a></li>
-            <li><a href="" class="footer-boton"><ion-icon name="logo-instagram"></ion-icon></a></li>
-            <li><a href="" class="footer-boton"><ion-icon name="mail"></ion-icon></a></li>
-            <li><a href="" class="footer-boton"><ion-icon name="call"></ion-icon></a></li>
-            <li><a href="contact.html" class="footer-boton"><ion-icon name="paper-plane"></ion-icon></a></li>
-          </ul>
-        </div>
-      </footer>
-    </div>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-  </body>
-</html>
+<?php require_once("./footer.php"); ?>
