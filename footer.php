@@ -8,7 +8,7 @@
       <li><a href="" class="footer-boton"><ion-icon name="logo-instagram"></ion-icon></a></li>
       <li><a href="" class="footer-boton"><ion-icon name="mail"></ion-icon></a></li>
       <li><a href="" class="footer-boton"><ion-icon name="call"></ion-icon></a></li>
-      <li><a href="contact.html" class="footer-boton"><ion-icon name="paper-plane"></ion-icon></a></li></ul>
+      <li><a href="contact.php" class="footer-boton"><ion-icon name="paper-plane"></ion-icon></a></li></ul>
   </div>
 </footer>
 </div>
