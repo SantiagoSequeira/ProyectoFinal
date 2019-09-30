@@ -380,59 +380,48 @@ box-shadow: 7px 13px 37px #000;
 
 
 /* formulario de contacto */
-.form-group {
-  margin-bottom: 1rem;
+.form-cont {
+background-color: #24303c;
+padding: 30px;
+margin: auto;
+margin-top: 15px;
+border-radius: 4px;
+font-family: 'calibrí';
+color: white;
+box-shadow: 7px 13px 37px #000;
 }
-.form-control {
-  display: block;
+.form-cont h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.controls {
   width: 100%;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibrí';
+  font-size: 18px;
+  color: black;
 }
-.form-text {
-  display: block;
-  margin-top: 0.25rem;
+.form-cont .botons {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
 }
-.text-muted {
-  color: #6c757d !important;
-}
-.form-check-label {
-  margin-bottom: 0;
-}
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  color: #212529;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-.btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
-}
-.contact-form {
-  width: 95%;
-  margin: 0 auto;
+.form-cont .form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibrí';
+  font-size: 18px;
+  color: black;
 }
 /* fin de formulario de contacto */
 
@@ -1017,85 +1006,49 @@ margin: 0 auto;
 
 
 /* formulario de contacto */
-.NombreC {
-  text-align: center;
+.form-cont {
+width: 70%;
+background-color: #24303c;
+padding: 30px;
+margin: auto;
+margin-top: 15px;
+border-radius: 4px;
+font-family: 'calibrí';
+color: white;
+box-shadow: 7px 13px 37px #000;
 }
-.emailU {
-  text-align: center;
+.form-cont h4 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+.controls {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibrí';
+  font-size: 18px;
+  color: black;
+}
+.form-cont .botons {
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 12px;
   color: white;
+  margin: 16px 0;
+  font-size: 16px;
 }
-.perfilBasico img {
-  margin: 20px;
-  border-radius: 150px;
-}
-.perfilBasico {
-  background-color: #B1AEAC;
-  text-align: center;
-}
-.tarjetas img{
- width: 25%;
-}
-.tarjetas {
-  text-align: center;
-  border-style: dashed;
-  margin: 20px 0 10px 0;
-}
-.boton {
-   text-align: center;
-   margin: 5px 0;
- }
-.boton1 {
-   text-decoration: none;
-   padding: 10px;
-   font-weight: 600;
-   font-size: 15px;
-   color: #ffffff;
-   background-color: #1883ba;
-   border-radius: 6px;
-   border: 2px solid #0016b0;
-   margin: 5px 0;
- }
- .boton1:hover{
-   color: #1883ba;
-   background-color: #ffffff;
-}
-.boton2 {
-   text-decoration: none;
-   padding: 10px;
-   font-weight: 600;
-   font-size: 15px;
-   color: #ffffff;
-   background-color: #1883ba;
-   border-radius: 6px;
-   border: 2px solid #0016b0;
-   margin: 5px 0;
- }
- .boton2:hover{
-   color: #1883ba;
-   background-color: #ffffff;
-}
-.facturacion img {
-  width: 25%;
-}
-.facturacion {
-  text-align: center;
-  border-style: dashed;
-  margin: 20px 0;
-}
-.boton3 {
-   text-decoration: none;
-   padding: 10px;
-   font-weight: 600;
-   font-size: 15px;
-   color: #ffffff;
-   background-color: #1883ba;
-   border-radius: 6px;
-   border: 2px solid #0016b0;
-   margin: 5px 0;
- }
- .boton3:hover{
-   color: #1883ba;
-   background-color: #ffffff;
+.form-cont .form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: 'calibrí';
+  font-size: 18px;
+  color: black;
 }
 /* fin de formulario de contacto */
 
