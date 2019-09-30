@@ -5,7 +5,12 @@
      redir();
 }
    if($_POST){
-     $_SESSION["user"] = "Santy";
+     $_SESSION["user"] = [
+       "email" => "san@g.c",
+       "name" => "Santy",
+       "surname" => "Sequeira",
+       "avatar" => "default.png"
+     ];
      redir();
  }
    require_once("header.php");

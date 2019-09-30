@@ -6,7 +6,7 @@
   $nombre = "";
   $apellido = "";
   $email = "";
-  $file ="";
+  $file ="default.png";
   $errorNombre= "";
   $errorEmail = "";
   $errorPassword = "";
@@ -18,22 +18,12 @@
     $password = $_POST["password"];
     $passwordconfirm = $_POST["passwordconfirm"];
     $tyc = $_POST["tyc"];
-    if (strlen($nombre)<3){
-      $errorNombre = "The name is very short!";
-    }
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
-      $errorEmail = "The email is incorrect!";
-    }
-    if(strlen($password) < 8){
-      $errorPassword = "The password is very short! (+8 characters)";
-    } else if ($password != $passwordconfirm){
-      $errorPassword = "Passwords do not match";
-    }
-     if (!$tyc){
-       $errorTyC = "You must accept the terms and conditions for registration";
-     }
-
-   if ($errorTyC == "" && $errorEmail == "" && $errorNombre == "" && $errorPassword == ""){
+    $check = CheckUser($nombre,$email,$password,$passwordconfirm,$tyc);
+    $errorNombre= $check["nombre"];
+    $errorEmail = $check["email"];
+    $errorPassword = $check["password"];
+    $errorTyC = $check["tyc"];
+   if (!$check["error"]){
      if (!$_FILES["avatar"]["error"]){
       $nameFile = $_FILES["avatar"]["name"];
       $ext = pathinfo($nameFile,PATHINFO_EXTENSION);
@@ -66,14 +56,15 @@
           <h4>Registration Form</h4>
           <form class="" action="" method="post" enctype="multipart/form-data">
             <div> <?php echo $errorNombre;?> </div>
-            <input class="controls" type="text" name="nombre" placeholder="Name" value="<?=$nombre ?>">
-            <input class="controls" type="text" name="apellido" placeholder="Surname" value="<?=$apellido ?>">
+            <input class="controls" type="text" name="nombre" placeholder="Name *" value="<?=$nombre ?>">
+            <input class="controls" type="text" name="apellido" placeholder="Surname *" value="<?=$apellido ?>">
             <div> <?php echo $errorEmail;?> </div>
-            <input class="controls" type="email" name="email" placeholder="Email" value="<?=$email ?>">
+            <input class="controls" type="email" name="email" placeholder="Email *" value="<?=$email ?>">
             <div> <?php echo $errorPassword;?> </div>
-            <input class="controls" type="password" name="password" placeholder="Password">
-            <input class="controls" type="password" name="passwordconfirm" placeholder="Confirm password">
-            <input class="controls" type="file" name="avatar" accept="image/jpeg,image/jpg,image/png">
+            <input class="controls" type="password" name="password" placeholder="Password *">
+            <input class="controls" type="password" name="passwordconfirm" placeholder="Confirm password *">
+            <div> <label for="avatar">Avatar (opcional)</label> </div>
+            <input class="controls" type="file" name="avatar" id="avatar" accept="image/jpeg,image/jpg,image/png">
             <div class="ph">
               <input type="checkbox" name="tyc" id="tyc">
               <label for="tyc"> I agree <a href="#"></label>Terms and conditions</a>

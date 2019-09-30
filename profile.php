@@ -16,9 +16,10 @@
         <div class="perfilBasico">
           <img src="img/avatares/<?=$_SESSION["user"]["avatar"]?>" alt="foto de perfil">
           <h2 class="NombreC"><?=$_SESSION["user"]["name"]?></h2>
+          <h2 class="NombreC"><?=$_SESSION["user"]["surname"]?></h2>
           <h4 class="emailU"><?=$_SESSION["user"]["email"]?></h4>
           <div class="boton">
-          <button class="boton1" type="button" name="button">Editar</button>
+          <a href="editProfile.php"><button class="boton1" type="button" name="button">Editar</button></a>
           </div>
         </div>
         <div class="tarjetas">
