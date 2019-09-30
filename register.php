@@ -1,6 +1,4 @@
 <?php
-  echo phpversion();
-  die;
   require_once("functions.php");
   if (issetUser()){
     redir();
@@ -8,6 +6,7 @@
   $nombre = "";
   $apellido = "";
   $email = "";
+  $file ="";
   $errorNombre= "";
   $errorEmail = "";
   $errorPassword = "";
@@ -33,16 +32,27 @@
      if (!$tyc){
        $errorTyC = "You must accept the terms and conditions for registration";
      }
-  }
-  if ($errorTyC = "" && $errorEmail = "" && $errorNombre = "" && $errorPassword = ""){
-    // $user = [
-    //   "name" => $nombre,
-    //   "surname" => $apellido,
-    //   "email" => $email,
-    //   "password" => password_hash($password,PASSWORD_DEFAULT)
-    // ];
-    NewUser($usuario);
-  }
+
+   if ($errorTyC == "" && $errorEmail == "" && $errorNombre == "" && $errorPassword == ""){
+     if (!$_FILES["avatar"]["error"]){
+      $nameFile = $_FILES["avatar"]["name"];
+      $ext = pathinfo($nameFile,PATHINFO_EXTENSION);
+      $rand = rand(0,50000);
+      $tmpName = "$rand$nombre";
+        if ($ext == "jpg" || $ext == "jpeg" || $ext == "png"){
+          move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/avatares/". $tmpName . "." . $ext);
+          $file = "$tmpName.$ext";
+     } }
+    $user = [
+      "name" => $nombre,
+      "surname" => $apellido,
+      "email" => $email,
+      "password" => password_hash($password,PASSWORD_DEFAULT),
+      "avatar" => $file
+    ];
+     NewUser($user);
+   }
+}
   require_once("header.php");
   $pagina = "register";
 ?>
@@ -54,7 +64,7 @@
       <main>
         <div class="form-register">
           <h4>Registration Form</h4>
-          <form class="" action="" method="post">
+          <form class="" action="" method="post" enctype="multipart/form-data">
             <div> <?php echo $errorNombre;?> </div>
             <input class="controls" type="text" name="nombre" placeholder="Name" value="<?=$nombre ?>">
             <input class="controls" type="text" name="apellido" placeholder="Surname" value="<?=$apellido ?>">
@@ -63,6 +73,7 @@
             <div> <?php echo $errorPassword;?> </div>
             <input class="controls" type="password" name="password" placeholder="Password">
             <input class="controls" type="password" name="passwordconfirm" placeholder="Confirm password">
+            <input class="controls" type="file" name="avatar" accept="image/jpeg,image/jpg,image/png">
             <div class="ph">
               <input type="checkbox" name="tyc" id="tyc">
               <label for="tyc"> I agree <a href="#"></label>Terms and conditions</a>

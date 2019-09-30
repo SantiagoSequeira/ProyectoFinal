@@ -6,7 +6,7 @@
       redir();
     }
   function Issetuser(){
-    if(isset($_SESSION["usuario"])){
+    if(isset($_SESSION["user"])){
       return true;
     }
     }
@@ -14,9 +14,15 @@
       header("Location:  " . $location . ".php");
     }
     function log_out(){
-      $_SESSION["usuario"]= null;
+      $_SESSION["user"]= null;
     }
     function NewUser($user){
-      $jsonFile = file_get_contents("users.json");
+      $file = file_get_contents("users.json");
+      $array = json_decode($file,true);
+      $array [] = $user;
+      $json = json_encode($array);
+      file_put_contents("users.json",$json);
+      $_SESSION["user"] = $user;
+      redir("profile");
     }
 ?>

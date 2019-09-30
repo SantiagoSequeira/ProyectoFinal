@@ -9,10 +9,16 @@
               <?php }
               if (!(issetUser()) && !($pagina == "contact")) {?>
                 <li><a href="contact.php">Contact</a></li>
-           <?php }
-            if (issetUser()) {?>
-              <li><a href="functions.php?k=logout"><img src="img/fotoperfil.png" alt="" class="img-user"></a></li>
+           <?php }?>
+
+           <div class="log-profile">
+            <?php if (issetUser() && $pagina != "profile") {?>
+              <li><a href="profile.php"><img src="img/fotoperfil.png" alt="" class="img-user"></a></li>
+              <?php } if (issetUser()) {?>
+              <li><a href="functions.php?k=logout">Log-out</a></li>
+
             <?php }?>
+          </div>
           </ul>
           <div class="hamb">
             <a id="hamb" onclick="show()"><ion-icon name="menu"></ion-icon></a>

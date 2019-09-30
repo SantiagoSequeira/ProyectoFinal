@@ -6,6 +6,10 @@
   text-decoration: none;
   list-style-type: none;
 }
+.log-profile {
+  display: flex;
+  align-items: center;
+}
 .botonera {
   display: none;
   flex-direction: column;

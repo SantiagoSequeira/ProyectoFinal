@@ -12,11 +12,11 @@
       <?php include_once("menu.php"); ?>
     </header>
       <div class="profile">
-        <h2 >Mi Perfil</h1>
+        <h2 >Mi Perfil</h2>
         <div class="perfilBasico">
-          <img src="img/fotoperfil.png" alt="foto de perfil">
-          <h2 class="NombreC">Nombre Usuario</h2>
-          <h4 class="emailU">EmailUsuario@gmail.com</h4>
+          <img src="img/avatares/<?=$_SESSION["user"]["avatar"]?>" alt="foto de perfil">
+          <h2 class="NombreC"><?=$_SESSION["user"]["name"]?></h2>
+          <h4 class="emailU"><?=$_SESSION["user"]["email"]?></h4>
           <div class="boton">
           <button class="boton1" type="button" name="button">Editar</button>
           </div>

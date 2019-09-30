@@ -5,7 +5,7 @@
      redir();
 }
    if($_POST){
-     $_SESSION["usuario"] = "Santy";
+     $_SESSION["user"] = "Santy";
      redir();
  }
    require_once("header.php");
