@@ -1,12 +1,12 @@
 <?php
    require_once("functions.php");
+   $pagina = "login";
    if (issetUser()){
      redir();
 }
    if($_POST){
      $_SESSION["usuario"] = "Santy";
      redir();
-     $pagina = "login";
  }
 
    require_once("header.php");

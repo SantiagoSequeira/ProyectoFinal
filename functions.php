@@ -16,4 +16,7 @@
     function log_out(){
       $_SESSION["usuario"]= null;
     }
+    function NewUser($user){
+      $jsonFile = file_get_contents("users.json");
+    }
 ?>
