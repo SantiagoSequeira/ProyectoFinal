@@ -24,7 +24,7 @@
       <main>
         <div class="form-login">
           <h4>Log In</h4>
-          <form class="" action="index.php" method="post">
+          <form class="" action="" method="post">
             <input class="controls" type="email" name="email" placeholder="Email" value="">
             <input class="controls" type="password" name="password" placeholder="Password">
             <input class="botons" type="submit" value="Log In">

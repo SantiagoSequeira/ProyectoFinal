@@ -3,46 +3,15 @@
   if (issetUser()){
     redir();
   }
-  $nombre = "";
-  $apellido = "";
-  $email = "";
-  $file ="default.png";
-  $errorNombre= "";
-  $errorEmail = "";
-  $errorPassword = "";
-  $errorTyC = "";
   if ($_POST){
-    $nombre = trim($_POST["nombre"]);
-    $apellido = trim($_POST["apellido"]);
-    $email = trim($_POST["email"]);
-    $password = $_POST["password"];
-    $passwordconfirm = $_POST["passwordconfirm"];
-    $tyc = $_POST["tyc"];
-    $check = CheckUser($nombre,$email,$password,$passwordconfirm,$tyc);
-    $errorNombre= $check["nombre"];
-    $errorEmail = $check["email"];
-    $errorPassword = $check["password"];
-    $errorTyC = $check["tyc"];
-   if (!$check["error"]){
-     if (!$_FILES["avatar"]["error"]){
-      $nameFile = $_FILES["avatar"]["name"];
-      $ext = pathinfo($nameFile,PATHINFO_EXTENSION);
-      $rand = rand(0,50000);
-      $tmpName = "$rand$nombre";
-        if ($ext == "jpg" || $ext == "jpeg" || $ext == "png"){
-          move_uploaded_file($_FILES["avatar"]["tmp_name"], "img/avatares/". $tmpName . "." . $ext);
-          $file = "$tmpName.$ext";
-     } }
-    $user = [
-      "name" => $nombre,
-      "surname" => $apellido,
-      "email" => $email,
-      "password" => password_hash($password,PASSWORD_DEFAULT),
-      "avatar" => $file
-    ];
-     NewUser($user);
+    $check = CheckNewUser($_POST);
+    $errors = $check["errors"];
+    $errorNombre= $errors["nombre"];
+    $errorEmail = $errors["email"];
+    $errorPassword = $errors["password"];
+    $errorTyC = $errors["tyc"];
+    $user = $check["user"];
    }
-}
   require_once("header.php");
   $pagina = "register";
 ?>
@@ -55,12 +24,12 @@
         <div class="form-register">
           <h4>Registration Form</h4>
           <form class="" action="" method="post" enctype="multipart/form-data">
-            <div> <?php echo $errorNombre;?> </div>
-            <input class="controls" type="text" name="nombre" placeholder="Name *" value="<?=$nombre ?>">
-            <input class="controls" type="text" name="apellido" placeholder="Surname *" value="<?=$apellido ?>">
-            <div> <?php echo $errorEmail;?> </div>
-            <input class="controls" type="email" name="email" placeholder="Email *" value="<?=$email ?>">
-            <div> <?php echo $errorPassword;?> </div>
+            <div> <?php echo (isset($errorNombre)) ? $errorNombre : "" ?> </div>
+            <input class="controls" type="text" name="nombre" placeholder="Name *" value="<?php echo (isset($user["nombre"]))? $user["nombre"]: "" ?>">
+            <input class="controls" type="text" name="apellido" placeholder="Surname *" value="<?php echo (isset($user["apellido"]))? $user["apellido"]: ""?>">
+            <div> <?php echo (isset($errorEmail))? $errorEmail: "" ?> </div>
+            <input class="controls" type="email" name="email" placeholder="Email *" value="<?php echo (isset($user["email"]))? $user["email"]: ""?>">
+            <div> <?php echo (isset($errorPassword))? $errorPassword: "";?> </div>
             <input class="controls" type="password" name="password" placeholder="Password *">
             <input class="controls" type="password" name="passwordconfirm" placeholder="Confirm password *">
             <div> <label for="avatar">Avatar (opcional)</label> </div>
@@ -69,12 +38,12 @@
               <input type="checkbox" name="tyc" id="tyc">
               <label for="tyc"> I agree <a href="#"></label>Terms and conditions</a>
             </div>
-            <div> <?php echo $errorTyC;?> </div>
+            <div> <?php echo (isset($errorTyC))? $errorTyC: "";?> </div>
             <input  class="botons" type="submit" value="Sing In">
           </form>
           <div class="ph">
             <a href="login.php">You already have an account?</a>
           </div>
         </div>
-      </main>
+        </main>
 <?php require_once("./footer.php"); ?>
