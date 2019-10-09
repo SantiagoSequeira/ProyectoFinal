@@ -55,7 +55,7 @@
     $password = $user["password"];
     $passwordconfirm = $user["passwordconfirm"];
     $tyc = $user["tyc"];
-    $file = ($modify)? $_SESSION["user"]["avatar"] : "default.jpg";
+    $file = ($modify)? $_SESSION["user"]["avatar"] : "default.png";
     $error = false;
     $errorNombre= "";
     $errorEmail = "";
