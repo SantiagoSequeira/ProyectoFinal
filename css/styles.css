@@ -10,6 +10,13 @@
   display: flex;
   align-items: center;
 }
+.log-out {
+    font-family: Manjari;
+    font-size: 1.1em;
+    background-color: #FFF;
+    border: 0px;
+    cursor: pointer;
+}
 .botonera {
   display: none;
   flex-direction: column;
@@ -29,7 +36,7 @@
   margin-top: 50px;
 }
 .hamb a{
-  font-size: 30px;
+  font-size: 2em;
   background: #FFF;
   width: 50px;
   height: 50px;
@@ -41,7 +48,7 @@
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .botonera a {
-  font-size: 30px;
+  font-size: 2em;
   background: #FFF;
   width: 50px;
   height: 50px;
@@ -51,6 +58,9 @@
   margin-top: 5px;
   border-radius: 50%;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.footer-ul li a h2 {
+  display: none;
 }
 a {
   color: #000;
@@ -82,7 +92,7 @@ header {
   padding-left: 5px;
   text-align: left;
   width: 100%;
-  font-size: 35px;
+  font-size: 2em;
 }
 .articulo {
   position: relative;
@@ -94,7 +104,7 @@ header {
   position: absolute;
   bottom: 30px;
   right: 15px;
-  font-size: 20px;
+  font-size: 1.5em;
   padding: 5px;
   color: #000;
   border-radius: 20px;
@@ -119,17 +129,14 @@ h2 {
 }
 h3 {
   font-family: 'Manjari';
-  font-size: 35px;
+  font-size: 1.5em;
 }
 h5 {
   font-family: 'Manjari',sans-serif;
 
 }
-.ph {
-  text-align: center;
-  font-size: 40px;
-  line-height: 40px;
-  color: white;
+.desc p {
+    margin: 0 20px;
 }
 footer {
   margin-top: 40px;
@@ -151,7 +158,7 @@ footer {
   overflow: hidden;
 }
 .footer-boton {
-  font-size: 30px;
+  font-size: 2em;
   background: #FFF;
   width: 50px;
   height: 50px;
@@ -174,10 +181,7 @@ input[type=checkbox] {
      transform: scale(1.5);
     margin-right: 10px;
 }
-
-
 /* fin de vista de home */
-
 
 /* Vista de producto */
 .img-producto {
@@ -198,7 +202,7 @@ input[type=checkbox] {
   color: #FFF;
   display: flex;
   justify-content: center;
-  font-size: 20px;
+  font-size: 1.5em;
   padding: 5px;
   width: 80%;
   margin: 0 auto;
@@ -215,29 +219,9 @@ input[type=checkbox] {
 .testq {
   display: none;
 }
-
-
-
-  /*
-
-  .article-desc {
-    margin-left: 10px;
-  }
-  h5 {
-    color: #FFF;
-    font-family: 'Roboto Slab';
-  }
-  h6 {
-    margin-top: 20px;
-    font-size: 40px;
-    text-align: center;
-    font-family: Manjari,sans-serif;
-  } */
-/* fin de vista de producto
-
+/* fin de vista de producto */
 
 /* vista de carrito */
-
 .item-cart {
   display: flex;
   align-items: center;
@@ -250,66 +234,38 @@ input[type=checkbox] {
   width: 90%;
   margin: 0 auto;
 }
-/*
-
-POP UP CON JAVASCRIPT
-
-.pop-up{
-  display: none;
-  position: absolute;
-  align-items: center;
-  width: 100%;
-  left: 0px;
-  top: 0;
-  height: 100%;
-  z-index: 3;
-
+.cart-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #4682B4;
+    color: #FFF;
 }
-
-.menu {
-  height: 50%;
-  background-color: #FFF;
-  width: 100%;
+.cart-input{
+  text-align: center;
+  width: 15%;
+  box-shadow: 0 8px 20px 0 rgba(0,0,0,0.2), 0 4px 10px 0 rgba(0,0,0,0.19);
 }
-.close {
-  font-size: 40px;
-  text-align: right;
+.red {
+  background-color: red;
+  margin-left: 25%;
 }
-.menu-container {
-  width: 80%;
-  margin: 0 auto;
-}
-.cantidad {
-  font-size: 30px;
-}
-.menu-buttons {
-  display: flex;
-  align-items: center;
-  margin-top: 50px;
-}
-.trash {
-  font-size: 40px;
-  font-family: 'Manjari';
-} */
-
-
 /* fin de vista de carrito */
-
 
 /* formulario de registro */
 .form-register {
-width: 100%;
-background-color: #24303c;
-padding: 30px;
-margin: auto;
-margin-top: 15px;
-border-radius: 4px;
-font-family: 'calibrí';
-color: white;
-box-shadow: 7px 13px 37px #000;
+  width: 100%;
+  background-color: #24303c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-family: 'calibrí';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
 }
 .form-register h4 {
-  font-size: 22px;
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 .form-register a {
@@ -328,24 +284,29 @@ box-shadow: 7px 13px 37px #000;
   padding: 12px;
   color: white;
   margin: 16px 0;
-  font-size: 16px;
+  font-size: 1.5em;
+}
+.ph {
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 40px;
+  color: white;
 }
 /* fin de formulario de registro */
 
-
 /* formulario de login */
 .form-login {
-background-color: #24303c;
-padding: 30px;
-margin: auto;
-margin-top: 15px;
-border-radius: 4px;
-font-family: 'calibrí';
-color: white;
-box-shadow: 7px 13px 37px #000;
+  background-color: #24303c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-family: 'calibrí';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
 }
 .form-login h4 {
-  font-size: 22px;
+  font-size: 1.5em;
   margin-bottom: 20px;
 }
 .controls {
@@ -355,10 +316,9 @@ box-shadow: 7px 13px 37px #000;
   margin-bottom: 16px;
   border: 1px solid #1f53c5;
   font-family: 'calibrí';
-  font-size: 18px;
+  font-size: 1.5em;
   color: black;
 }
-
 .form-login a {
   color: white;
   text-decoration: none;
@@ -374,35 +334,24 @@ box-shadow: 7px 13px 37px #000;
   padding: 12px;
   color: white;
   margin: 16px 0;
-  font-size: 16px;
+  font-size: 2em;
 }
 /* fin de formulario de login */
 
-
 /* formulario de contacto */
 .form-cont {
-background-color: #24303c;
-padding: 30px;
-margin: auto;
-margin-top: 15px;
-border-radius: 4px;
-font-family: 'calibrí';
-color: white;
-box-shadow: 7px 13px 37px #000;
+  background-color: #24303c;
+  padding: 30px;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 4px;
+  font-family: 'calibrí';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
 }
 .form-cont h4 {
-  font-size: 22px;
+  font-size: 1.5em;
   margin-bottom: 20px;
-}
-.controls {
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  border: 1px solid #1f53c5;
-  font-family: 'calibrí';
-  font-size: 18px;
-  color: black;
 }
 .form-cont .botons {
   width: 100%;
@@ -411,7 +360,7 @@ box-shadow: 7px 13px 37px #000;
   padding: 12px;
   color: white;
   margin: 16px 0;
-  font-size: 16px;
+  font-size: 1.5em;
 }
 .form-cont .form-control {
   width: 100%;
@@ -420,69 +369,38 @@ box-shadow: 7px 13px 37px #000;
   margin-bottom: 16px;
   border: 1px solid #1f53c5;
   font-family: 'calibrí';
-  font-size: 18px;
+  font-size: 1em;
   color: black;
 }
 /* fin de formulario de contacto */
-
 
 /* vista de preguntas frecuentes */
 .faqtitulo {
   text-align: center;
   font-family: 'calibrí';
-  font-size: 30px;
+  font-size: 1em;
 }
 .faqmenu {
   display: flex;
   flex-direction: column;
   font-family: 'calibrí';
-  font-size: 30px;
+  font-size: 1.5em;
   text-align: center;
 }
 .hquestions {
   text-align: center;
   margin: 30px 0;
 }
-#Q1 {
-  text-align: center;
-  margin: 30px 0;
-}
-#Q2 {
-  text-align: center;
-  margin: 30px 0;
-}
-#Q3 {
-  text-align: center;
-  margin: 30px 0;
-}
-#Q4 {
-  text-align: center;
-  margin: 30px 0;
-}
-#Q5 {
-  text-align: center;
-  margin: 30px 0;
-}
-#Q6 {
-  text-align: center;
-  margin: 30px 0;
-}
-#Q7 {
-  text-align: center;
-  margin: 30px 0;
-}
-#Q8 {
-  text-align: center;
-  margin: 30px 0;
-}
 .hquestions p {
-  font-size: 20px;
+  font-size: 1em;
 }
-
 /* fin vista de preguntas frecuentes */
 
-
 /* vista de perfil de usuario */
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+}
 .NombreC {
   text-align: center;
 }
@@ -490,10 +408,7 @@ box-shadow: 7px 13px 37px #000;
   text-align: center;
   color: white;
 }
-.perfilBasico img {
-  margin: 20px;
-  border-radius: 150px;
-}
+
 .perfilBasico {
   background-color: #B1AEAC;
   text-align: center;
@@ -514,7 +429,7 @@ box-shadow: 7px 13px 37px #000;
    text-decoration: none;
    padding: 10px;
    font-weight: 600;
-   font-size: 15px;
+   font-size: 1em;
    color: #ffffff;
    background-color: #1883ba;
    border-radius: 6px;
@@ -529,7 +444,7 @@ box-shadow: 7px 13px 37px #000;
    text-decoration: none;
    padding: 10px;
    font-weight: 600;
-   font-size: 15px;
+   font-size: 1em;
    color: #ffffff;
    background-color: #1883ba;
    border-radius: 6px;
@@ -552,7 +467,7 @@ box-shadow: 7px 13px 37px #000;
    text-decoration: none;
    padding: 10px;
    font-weight: 600;
-   font-size: 15px;
+   font-size: 1em;
    color: #ffffff;
    background-color: #1883ba;
    border-radius: 6px;
@@ -563,11 +478,34 @@ box-shadow: 7px 13px 37px #000;
    color: #1883ba;
    background-color: #ffffff;
 }
+.round-img {
+  border-radius: 150px;
+  width: 150px;
+  height: 150px;
+}
+.editForm {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  }
+.avatarForm {
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.inputsForm {
+  margin-top: 30px;
+  width: 100%;
+}
+
 /* fin de vista de perfil de usuario */
 
 @media only screen and (min-width : 768px) {
-/* TABLET */
-/* vista de home */
+
+  /* TABLET */
+
+  /* vista de home */
   .articulos {
     display: flex;
     flex-wrap: wrap;
@@ -577,11 +515,11 @@ box-shadow: 7px 13px 37px #000;
     width: 40%;
   }
   .titulo {
-    font-size: 50px;
+    font-size: 2em;
     text-align: center;
   }
   .hamb a{
-    font-size: 35px;
+    font-size: 3em;
     width: 70px;
     height: 70px;
   }
@@ -589,21 +527,21 @@ box-shadow: 7px 13px 37px #000;
     margin-top: 125px;
   }
   .botonera a {
-    font-size: 35px;
+    font-size: 3em;
     width: 70px;
     height: 70px;
   }
   .cart {
-    font-size: 25px;
+    font-size: 1.5em;
   }
   h2 {
-    font-size: 35px;
+    font-size: 1.5em;
   }
   .mapa {
     height: 350px;
   }
   .footer-boton {
-    font-size: 45px;
+    font-size: 2.5em;
     width: 80px;
     height: 80px;
     display: flex;
@@ -613,240 +551,166 @@ box-shadow: 7px 13px 37px #000;
     border-radius: 50%;
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-/* fin de vista de home */
+  /* fin de vista de home */
 
 
-/* Vista de producto */
-.product-container {
-  display: flex;
-}
-.descripcion-producto {
-   width: 50%;
-   font-size: 20px;
-}
-.producto {
-  width: 50%;
-}
-  /* .articulo-single {
-    width: 98%;
+  /* Vista de producto */
+  .product-container {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
   }
-  .articulo-img-single {
-    width: 49%;
+  .descripcion-producto {
+     width: 50%;
+     font-size: 1.2em;
   }
-  .articulo-single-desc {
-    width: 49%;
+  .producto {
+    width: 50%;
   }
-  .article-footer {
+  /* fin de vista de producto */
+
+  /* vista de carrito */
+  /* fin de vista de carrito */
+
+
+  /* formulario de registro */
+  .form-register {
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+  }
+  .form-register h4 {
+    margin-bottom: 20px;
+  }
+  .form-register a {
+
+  }
+  .form-register a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  .form-register .botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+  }
+  /* fin de formulario de registro */
+
+  /* formulario de login */
+  .form-login {
+    width: 70%;
+  }
+  .form-login h4 {
+    margin-bottom: 20px;
+  }
+  /* fin de formulario de login */
+
+  /* formulario de contacto */
+  /* fin de formulario de contacto */
+
+  /* vista de preguntas frecuentes */
+  .faqtitulo {
+    text-align: center;
+    font-family: 'calibrí';
+    margin: 40px 0;
+  }
+
+  .hquestions {
+    margin: 30px 0;
+  }
+
+  /* fin vista de preguntas frecuentes */
+
+  /* vista de perfil de usuario */
+  .NombreC {
     text-align: center;
   }
-  h4 {
-    margin: 30px 0 10px 30px;
-  } */
-/* fin de vista de producto */
-
-/* vista de carrito */
-/* fin de vista de carrito */
-
-
-/* formulario de registro */
-.form-register {
-width: 80%;
-margin: auto;
-margin-top: 15px;
+  .emailU {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+  }
+  .perfilBasico img {
+    margin: 20px;
+    border-radius: 150px;
+  }
+  .perfilBasico {
+    background-color: #B1AEAC;
+    text-align: center;
+  }
+  .tarjetas img{
+   width: 25%;
+  }
+  .tarjetas {
+    text-align: center;
+    border-style: dashed;
+    margin: 20px 0 10px 0;
+  }
+  .boton {
+     text-align: center;
+     margin: 5px 0;
+   }
+  .boton1 {
+     text-decoration: none;
+     padding: 10px;
+     font-weight: 600;
+     color: #ffffff;
+     background-color: #1883ba;
+     border-radius: 6px;
+     border: 2px solid #0016b0;
+     margin: 5px 0;
+   }
+   .boton1:hover{
+     color: #1883ba;
+     background-color: #ffffff;
+  }
+  .boton2 {
+     text-decoration: none;
+     padding: 10px;
+     font-weight: 600;
+     color: #ffffff;
+     background-color: #1883ba;
+     border-radius: 6px;
+     border: 2px solid #0016b0;
+     margin: 5px 0;
+   }
+   .boton2:hover{
+     color: #1883ba;
+     background-color: #ffffff;
+  }
+  .foto-perfil {
+    width: 200px;
+    height: 200px;
+  }
+  .facturacion img {
+    width: 25%;
+  }
+  .facturacion {
+    text-align: center;
+    border-style: dashed;
+    margin: 20px 0;
+  }
+  .boton3 {
+     text-decoration: none;
+     padding: 10px;
+     font-weight: 600;
+     color: #ffffff;
+     background-color: #1883ba;
+     border-radius: 6px;
+     border: 2px solid #0016b0;
+     margin: 5px 0;
+   }
+   .boton3:hover{
+     color: #1883ba;
+     background-color: #ffffff;
+  }
+  /* fin de vista de perfil de usuario */
 }
-.form-register h4 {
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-.controls {
-
-}
-.form-register a {
-
-}
-.form-register a:hover {
-  color: white;
-  text-decoration: underline;
-}
-.form-register .botons {
-  width: 100%;
-  background: #1f53c5;
-  border: none;
-  padding: 12px;
-  color: white;
-  margin: 16px 0;
-  font-size: 16px;
-}
-/* fin de formulario de registro */
-
-
-/* formulario de login */
-.form-login {
-width: 70%;
-}
-.form-login h4 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-/* fin de formulario de login */
-
-
-/* formulario de contacto */
-/* fin de formulario de contacto */
-
-
-/* vista de preguntas frecuentes */
-.faqtitulo {
-  text-align: center;
-  font-family: 'calibrí';
-  font-size: 50px;
-  margin: 40px 0;
-}
-.faqmenu {
-  font-size: 50px;
-}
-.hquestions {
-  margin: 30px 0;
-}
-#Q1 {
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q2 {
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q3 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q4 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q5 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q6 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q7 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q8 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-.hquestions p {
-  font-size: 36px;
-}
-/* fin vista de preguntas frecuentes */
-
-
-/* vista de perfil de usuario */
-.perfil {
-  font-size: 30px;
-}
-.NombreC {
-  text-align: center;
-}
-.emailU {
-  text-align: center;
-  color: white;
-  font-size: 25px;
-}
-.perfilBasico img {
-  margin: 20px;
-  border-radius: 150px;
-}
-.perfilBasico {
-  background-color: #B1AEAC;
-  text-align: center;
-}
-.tarjetas img{
- width: 25%;
-}
-.tarjetas {
-  text-align: center;
-  border-style: dashed;
-  margin: 20px 0 10px 0;
-}
-.boton {
-   text-align: center;
-   margin: 5px 0;
- }
-.boton1 {
-   text-decoration: none;
-   padding: 10px;
-   font-weight: 600;
-   font-size: 25px;
-   color: #ffffff;
-   background-color: #1883ba;
-   border-radius: 6px;
-   border: 2px solid #0016b0;
-   margin: 5px 0;
- }
- .boton1:hover{
-   color: #1883ba;
-   background-color: #ffffff;
-}
-.boton2 {
-   text-decoration: none;
-   padding: 10px;
-   font-weight: 600;
-   font-size: 25px;
-   color: #ffffff;
-   background-color: #1883ba;
-   border-radius: 6px;
-   border: 2px solid #0016b0;
-   margin: 5px 0;
- }
- .boton2:hover{
-   color: #1883ba;
-   background-color: #ffffff;
-}
-.facturacion img {
-  width: 25%;
-}
-.facturacion {
-  text-align: center;
-  border-style: dashed;
-  margin: 20px 0;
-}
-.boton3 {
-   text-decoration: none;
-   padding: 10px;
-   font-weight: 600;
-   font-size: 25px;
-   color: #ffffff;
-   background-color: #1883ba;
-   border-radius: 6px;
-   border: 2px solid #0016b0;
-   margin: 5px 0;
- }
- .boton3:hover{
-   color: #1883ba;
-   background-color: #ffffff;
-}
-/* fin de vista de perfil de usuario */
-
 
 @media only screen and (min-width: 1024px) {
-/* DESKTOP */
-/* vista de home */
+  /* DESKTOP */
+  /* vista de home */
   .articulos {
     display: flex;
     flex-wrap: wrap;
@@ -854,9 +718,10 @@ width: 70%;
   }
   .articulo {
     width: 20%;
+    margin: 20px;
   }
   .titulo {
-    font-size: 25px;
+    font-size: 1.2em;
     width: 20%;
     display: flex;
     align-items: center;
@@ -869,13 +734,41 @@ width: 70%;
     display: none;
   }
   .cart {
-    font-size: 25px;
+    font-size: 1.2em;
+  }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer h2 {
+    width: 65%;
+  }
+  .footer-boton {
+    font-size: 1.5em;
+    border-radius: 50px 50px 50px 50px;
+    width: 150px;
+   }
+  .footer-ul li a h2 {
+     display: block;
+    width: 50%;
+    font-size: 0.8em;
+  }
+  .pie-pagina {
+    width: 50%;
   }
   h2 {
-    font-size: 35px;
+    font-size: 1em;
+  }
+  .desc {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .desc p {
+    margin-left: 20px;
   }
   .mapa {
-    height: 350px;
+    width: 50%;
+    height: 230px;
   }
   .header-nav{
     display: flex;
@@ -894,239 +787,201 @@ width: 70%;
     justify-content: space-between;
   }
   main {
-    margin-top: 110px;
+    margin-top: 50px;
   }
   .header-nav li a {
     font-family: Manjari;
-    font-size: 30px;
+    font-size: 1.1em;
   }
   .img-user {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-  }
-  .mapa {
-    height: 600px;
   }
   input[type=checkbox] {
        transform: scale(3);
       margin-right: 10px;
   }
+  /* fin de vista de home */
 
-/* fin de vista de home */
-
-
-/* Vista de producto */
-.descripcion-producto {
-   font-size: 30px;
-}
-.price {
-  font-size: 50px;
-}
-.add-cart {
-  font-size: 30px;
-}
-.producto {
-  width: 50%;
-}
-.product-container {
-  display: flex;
-}
-.descripcion-producto {
-  width: 50%;
-}
-/* fin de vista de producto */
-
-/* vista de carrito */
-/* fin de vista de carrito */
-
-
-/* formulario de registro */
-.form-register {
-width: 80%;
-background-color: #24303c;
-padding: 60px;
-margin: 0 auto;
-}
-.form-register h4 {
-  font-size: 44px;
-  margin-bottom: 40px;
-}
-
-.form-register p {
-  font-size: 36px;
-  line-height: 80px;
-}
-.form-register a {
-  color: white;
-  text-decoration: none;
-}
-.form-register a:hover {
-  color: white;
-  text-decoration: underline;
-}
-.form-register .botons {
-  width: 100%;
-  background: #1f53c5;
-  border: none;
-  padding: 24px;
-  color: white;
-  margin: 32px 0;
-  font-size: 32px;
-}
-/* fin de formulario de registro */
-
-
-/* formulario de login */
-.form-login {
-  width: 70%;
-}
-.form-login h4 {
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-.controls {
-  font-size: 25px;
-
-}
-.form-login p {
-  font-size: 36px;
-}
-
-.form-login .botons {
-  width: 100%;
-  background: #1f53c5;
-  border: none;
-  padding: 20px;
-  color: white;
-  margin: 32px 0;
-  font-size: 25px;
-}
-/* fin de formulario de login */
-
-
-/* formulario de contacto */
-.form-cont {
-width: 70%;
-background-color: #24303c;
-padding: 30px;
-margin: auto;
-margin-top: 15px;
-border-radius: 4px;
-font-family: 'calibrí';
-color: white;
-box-shadow: 7px 13px 37px #000;
-}
-.form-cont h4 {
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-.controls {
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  border: 1px solid #1f53c5;
-  font-family: 'calibrí';
-  font-size: 18px;
-  color: black;
-}
-.form-cont .botons {
-  width: 100%;
-  background: #1f53c5;
-  border: none;
-  padding: 12px;
-  color: white;
-  margin: 16px 0;
-  font-size: 16px;
-}
-.form-cont .form-control {
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 16px;
-  border: 1px solid #1f53c5;
-  font-family: 'calibrí';
-  font-size: 18px;
-  color: black;
-}
-/* fin de formulario de contacto */
-
-
-/* vista de preguntas frecuentes */
-.faqtitulo {
-  text-align: center;
-  font-family: 'calibrí';
-  font-size: 50px;
-  margin: 40px 0;
-}
-.faqmenu {
-  font-size: 50px;
-}
-.hquestions {
-  text-align: center;
-  margin: 60px 0;
-  overflow: hidden;
-}
-#Q1 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q2 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q3 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q4 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q5 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q6 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q7 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-#Q8 {
-  text-align: center;
-  margin: 30px 0;
-  font-size: 60px;
-}
-
-/* fin vista de preguntas frecuentes */
-
-
-/* vista de perfil de usuario */
-.NombreC {
-  text-align: center;
-}
-.emailU {
-  text-align: center;
-}
-.perfilBasico button {
-  text-align: center;
-}
-.perfilBasico {
-  background-color: #B1AEAC;
-}
-.profile {
-  margin-top: 100px;
+  /* Vista de producto */
+  .descripcion-producto {
   }
+  .price {
+    font-size: 2.5em;
+  }
+  .producto {
+    width: 50%;
+  }
+  .product-container {
+    display: flex;
+  }
+  .descripcion-producto {
+    width: 50%;
+  }
+  /* fin de vista de producto */
+
+  /* vista de carrito */
+  /* fin de vista de carrito */
+
+
+  /* formulario de registro */
+  .form-register {
+    width: 80%;
+    background-color: #24303c;
+    padding: 60px;
+    margin: 0 auto;
+  }
+  .form-register h4 {
+    margin-bottom: 40px;
+  }
+  .form-register p {
+    line-height: 80px;
+  }
+  .form-register a {
+    color: white;
+    text-decoration: none;
+  }
+  .form-register a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  .form-register .botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 24px;
+    color: white;
+    margin: 32px 0;
+  }
+  /* fin de formulario de registro */
+
+  /* formulario de login */
+  .form-login {
+    width: 70%;
+  }
+  .form-login h4 {
+    margin-bottom: 40px;
+  }
+  .form-login p {
+    font-size: 1.5em;
+  }
+  .form-login .botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 20px;
+    color: white;
+    margin: 32px 0;
+  }
+  /* fin de formulario de login */
+
+  /* formulario de contacto */
+  .form-cont {
+    width: 70%;
+    background-color: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 4px;
+    font-family: 'calibrí';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+  }
+  .form-cont h4 {
+    /* font-size: 40px; */
+    margin-bottom: 40px;
+  }
+  .controls {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibrí';
+  }
+  .form-cont .botons {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+  }
+  .form-cont .form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibrí';
+    color: black;
+  }
+  /* fin de formulario de contacto */
+
+  /* vista de preguntas frecuentes */
+  .faqtitulo {
+    text-align: center;
+    font-family: 'calibrí';
+    font-size: 2em;
+    margin: 40px 0;
+  }
+  .faqmenu {
+    /* font-size: 50px; */
+  }
+  .hquestions {
+    text-align: center;
+    margin: 60px 0;
+    overflow: hidden;
+  }
+  /* fin vista de preguntas frecuentes */
+
+  /* vista de perfil de usuario */
+  .NombreC {
+    text-align: center;
+  }
+  .emailU {
+    text-align: center;
+  }
+  .perfilBasico button {
+    text-align: center;
+  }
+  .perfilBasico {
+    background-color: #B1AEAC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+   }
+  .profile {
+    margin-top: 100px;
+    }
+  .tarjetas{
+    width: 40%;
+  }
+  .user-datos {
+    margin-left: 50px;
+  }
+  .user-settings {
+    display: flex;
+    justify-content: space-between;
+  }
+  .facturacion {
+    width: 40%;
+  }
+  .round-img {
+    border-radius: 150px;
+    width: 200px;
+    height: 200px;
+  }
+  .avatarForm {
+    display: block;
+    width: 40%;
+  }
+  .inputsForm {
+    margin-top: 0px;
+    margin-left: 40px;
+    width: 50%;
+  }
+  /* fin de vista de perfil de usuario */
 }
-/* fin de vista de perfil de usuario */

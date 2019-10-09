@@ -22,6 +22,90 @@
           </div>
         </a>
       </article>
+      <article class="articulo">
+        <a href="producto.php">
+          <div class="articulo-imagen">
+            <img src="img/beacon-kelsey-wroten.jpg" alt="" class="img-article">
+            <div class="cart">
+               <a href="cart.php">+ Carrito</a>
+            </div>
+          </div>
+          <div class="article-footer">
+            <h4>TITULO DEL PRODUCTO</h4>
+            <h4>$20.00</h4>
+          </div>
+        </a>
+      </article>
+      <article class="articulo">
+        <a href="producto.php">
+          <div class="articulo-imagen">
+            <img src="img/beacon-kelsey-wroten.jpg" alt="" class="img-article">
+            <div class="cart">
+               <a href="cart.php">+ Carrito</a>
+            </div>
+          </div>
+          <div class="article-footer">
+            <h4>TITULO DEL PRODUCTO</h4>
+            <h4>$20.00</h4>
+          </div>
+        </a>
+      </article>
+      <article class="articulo">
+        <a href="producto.php">
+          <div class="articulo-imagen">
+            <img src="img/beacon-kelsey-wroten.jpg" alt="" class="img-article">
+            <div class="cart">
+               <a href="cart.php">+ Carrito</a>
+            </div>
+          </div>
+          <div class="article-footer">
+            <h4>TITULO DEL PRODUCTO</h4>
+            <h4>$20.00</h4>
+          </div>
+        </a>
+      </article>
+      <article class="articulo">
+        <a href="producto.php">
+          <div class="articulo-imagen">
+            <img src="img/beacon-kelsey-wroten.jpg" alt="" class="img-article">
+            <div class="cart">
+               <a href="cart.php">+ Carrito</a>
+            </div>
+          </div>
+          <div class="article-footer">
+            <h4>TITULO DEL PRODUCTO</h4>
+            <h4>$20.00</h4>
+          </div>
+        </a>
+      </article>
+      <article class="articulo">
+        <a href="producto.php">
+          <div class="articulo-imagen">
+            <img src="img/beacon-kelsey-wroten.jpg" alt="" class="img-article">
+            <div class="cart">
+               <a href="cart.php">+ Carrito</a>
+            </div>
+          </div>
+          <div class="article-footer">
+            <h4>TITULO DEL PRODUCTO</h4>
+            <h4>$20.00</h4>
+          </div>
+        </a>
+      </article>
+      <article class="articulo">
+        <a href="producto.php">
+          <div class="articulo-imagen">
+            <img src="img/beacon-kelsey-wroten.jpg" alt="" class="img-article">
+            <div class="cart">
+               <a href="cart.php">+ Carrito</a>
+            </div>
+          </div>
+          <div class="article-footer">
+            <h4>TITULO DEL PRODUCTO</h4>
+            <h4>$20.00</h4>
+          </div>
+        </a>
+      </article>
     </section>
     <div class="desc">
       <h2>Descripción general del proyecto</h2>

@@ -7,7 +7,7 @@
     <header>
       <?php include_once("menu.php"); ?>
     </header>
-    <section>
+    <main>
       <div class="faqtitulo">
        <h2> Frequently Asked Questions</h2>
      </div>
@@ -43,5 +43,5 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
    </div>
-    </section>
+ </main>
 <?php require_once("./footer.php"); ?>

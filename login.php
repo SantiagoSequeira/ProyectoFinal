@@ -5,13 +5,7 @@
      redir();
 }
    if($_POST){
-     $_SESSION["user"] = [
-       "email" => "san@g.c",
-       "name" => "Santy",
-       "surname" => "Sequeira",
-       "avatar" => "default.png"
-     ];
-     redir();
+     $error = checkUserLogin($_POST);
  }
 
    require_once("header.php");
@@ -25,8 +19,13 @@
         <div class="form-login">
           <h4>Log In</h4>
           <form class="" action="" method="post">
-            <input class="controls" type="email" name="email" placeholder="Email" value="">
-            <input class="controls" type="password" name="password" placeholder="Password">
+            <input class="controls" type="email" autofocus name="email" placeholder="Email" value="<?php echo (isset($_POST["email"])) ? $_POST["email"] : "" ?>" required>
+            <input class="controls" type="password" name="password" placeholder="Password" required>
+            <div> <?php echo (isset($error)) ? $error : "" ?> </div>
+            <div class="ph">
+              <input type="checkbox" name="keep" id="keep">
+              <label for="keep">Keep me connected</label>
+            </div>
             <input class="botons" type="submit" value="Log In">
           </form>
           <p><a href="register.php"> You don't have an account?</a></p>

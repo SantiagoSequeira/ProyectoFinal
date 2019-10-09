@@ -19,11 +19,15 @@
            <?php }?>
 
            <div class="log-profile">
-            <?php if (issetUser() && ($pagina != "profile")) {?>
+             <?php  if (issetUser()) {?>
+             <li>
+               <form class="" action="logout.php" method="post">
+                 <input type="submit" name="logout" value="Log out" class="log-out">
+               </form>
+             </li>
+           <?php } if (issetUser() && ($pagina != "profile")) {?>
               <li><a href="profile.php"><img src="img/avatares/<?=$_SESSION["user"]["avatar"]?>" alt="" class="img-user"></a></li>
-              <?php } if (issetUser()) {?>
-              <li><a href="functions.php?k=logout">Log-out</a></li>
-            <?php }?>
+              <?php }?>
           </div>
           </ul>
           <div class="hamb">

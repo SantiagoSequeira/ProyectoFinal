@@ -25,17 +25,17 @@
           <h4>Registration Form</h4>
           <form class="" action="" method="post" enctype="multipart/form-data">
             <div> <?php echo (isset($errorNombre)) ? $errorNombre : "" ?> </div>
-            <input class="controls" type="text" name="nombre" placeholder="Name *" value="<?php echo (isset($user["nombre"]))? $user["nombre"]: "" ?>">
+            <input class="controls" type="text" required name="nombre" placeholder="Name *" value="<?php echo (isset($user["nombre"]))? $user["nombre"]: "" ?>">
             <input class="controls" type="text" name="apellido" placeholder="Surname *" value="<?php echo (isset($user["apellido"]))? $user["apellido"]: ""?>">
             <div> <?php echo (isset($errorEmail))? $errorEmail: "" ?> </div>
-            <input class="controls" type="email" name="email" placeholder="Email *" value="<?php echo (isset($user["email"]))? $user["email"]: ""?>">
+            <input class="controls" required type="email" name="email" placeholder="Email *" value="<?php echo (isset($user["email"]))? $user["email"]: ""?>">
             <div> <?php echo (isset($errorPassword))? $errorPassword: "";?> </div>
             <input class="controls" type="password" name="password" placeholder="Password *">
-            <input class="controls" type="password" name="passwordconfirm" placeholder="Confirm password *">
+            <input class="controls" type="password" name="passwordconfirm" placeholder="Confirm password *" required>
             <div> <label for="avatar">Avatar (opcional)</label> </div>
             <input class="controls" type="file" name="avatar" id="avatar" accept="image/jpeg,image/jpg,image/png">
             <div class="ph">
-              <input type="checkbox" name="tyc" id="tyc">
+              <input type="checkbox" name="tyc" id="tyc" required>
               <label for="tyc"> I agree <a href="#"></label>Terms and conditions</a>
             </div>
             <div> <?php echo (isset($errorTyC))? $errorTyC: "";?> </div>
