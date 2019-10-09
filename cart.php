@@ -39,7 +39,6 @@
         </li>
         <h5 class="add-cart finish-cart">
             Checkout
-        </h5>
+          </h5>
       </main>
-    </div>
 <?php require_once("./footer.php"); ?>

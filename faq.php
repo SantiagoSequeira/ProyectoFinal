@@ -9,6 +9,7 @@
     </header>
     <main>
       <div class="faq-background">
+        <h4 class="faq">Frequently Asked Questions</h4>
         <dl class="ask">
           <dt onclick="answer('id-1')" class="faq-titulo">Who we are?</dt>
           <dd class="answer" id="id-1" style="display: none">

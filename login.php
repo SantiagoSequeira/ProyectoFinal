@@ -7,7 +7,6 @@
    if($_POST){
      $error = checkUserLogin($_POST);
  }
-
    require_once("header.php");
 ?>
   <body>
@@ -30,5 +29,5 @@
           </form>
           <p><a href="register.php"> You don't have an account?</a></p>
         </div>
-    </main>
+        </main>
 <?php require_once("./footer.php"); ?>

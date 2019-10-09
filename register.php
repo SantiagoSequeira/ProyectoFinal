@@ -39,7 +39,7 @@
               <label for="tyc"> I agree <a href="#"></label>Terms and conditions</a>
             </div>
             <div> <?php echo (isset($errorTyC))? $errorTyC: "";?> </div>
-            <input  class="botons" type="submit" value="Sing In">
+            <input  class="botons" type="submit" value="Sign In">
           </form>
           <div class="ph">
             <a href="login.php">You already have an account?</a>
