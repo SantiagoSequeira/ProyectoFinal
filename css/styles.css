@@ -412,6 +412,7 @@ input[type=checkbox] {
 .foto-perfil {
   width: 150px;
   height: 150px;
+  border-radius: 50%;
 }
 .NombreC {
   text-align: center;
@@ -790,6 +791,7 @@ input[type=checkbox] {
   }
   .header-nav li {
     display: block;
+    margin-right: 25px;
   }
   header {
     display: flex;
@@ -799,7 +801,7 @@ input[type=checkbox] {
     justify-content: space-between;
   }
   main {
-    margin-top: 50px;
+    margin-top: 75px;
   }
   .header-nav li a {
     font-family: Manjari;

@@ -14,7 +14,7 @@
               if ($pagina == "register" && !(issetUser())) {?>
              <li><a href="login.php">Login</a></li>
              <?php }
-              if (!(issetUser()) && !($pagina == "contact")) {?>
+              if (!($pagina == "contact")) {?>
                 <li><a href="contact.php">Contact</a></li>
            <?php }?>
 
@@ -35,11 +35,15 @@
           </div>
             <div class="botonera" id="menu" style="display: none;">
             <?php if (!(issetUser()) && !($pagina == "login")) {?>
-              <a href="login.php"><ion-icon name="person"></ion-icon></a>
-            <?php } else if (issetUser()){?>
+              <a href="login.php"><ion-icon name="log-in"></ion-icon></a>
+            <?php } else if (issetUser() && !($pagina == "profile")){?>
                 <a href="profile.php"><ion-icon name="person"></ion-icon></a>
-                <a href="functions.php?k=logout"><ion-icon name="log-out"></ion-icon></a>
-              <?php  }; ?>
+              <?php } if(issetUser()){ ?>
+                <a href="logout.php"><ion-icon name="log-out"></ion-icon></a>
+              <?php  } if(!($pagina == "faq")) { ?>
             <a href="faq.php"><ion-icon name="help"></ion-icon></a>
+          <?php } if(!($pagina == "contact")) { ?>
+            <a href="contact.php" class="footer-boton"><ion-icon name="paper-plane"></ion-icon></a>
+            <?php } ?>
           </div>
         </nav>

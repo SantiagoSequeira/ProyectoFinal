@@ -28,13 +28,8 @@
           </dd>
         </dl>
         <div class="boton edit-faq">
-          <a href="editFaq.php"><button class="boton1" type="button" name="button">Edit</button></a>
+          <a href=""><button class="boton1" type="button" name="button">Edit</button></a>
         </div>
-          <!-- <dt onclick="answer('id-2')">Coffee</dt>
-          <dd class="answer" id="id-2" style="display: none">Black hot drink</dd>
-          <dt onclick="answer('id-3')">Coffee</dt>
-          <dd class="answer" id="id-3" style="display: none">Black hot drink</dd>
-        </dl> -->
       </div>
 
       </main>

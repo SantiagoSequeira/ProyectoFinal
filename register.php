@@ -26,7 +26,7 @@
           <form class="" action="" method="post" enctype="multipart/form-data">
             <div> <?php echo (isset($errorNombre)) ? $errorNombre : "" ?> </div>
             <input class="controls" type="text" required name="nombre" placeholder="Name *" value="<?php echo (isset($user["nombre"]))? $user["nombre"]: "" ?>">
-            <input class="controls" type="text" name="apellido" placeholder="Surname *" value="<?php echo (isset($user["apellido"]))? $user["apellido"]: ""?>">
+            <input class="controls" type="text" name="apellido" placeholder="Surname" value="<?php echo (isset($user["apellido"]))? $user["apellido"]: ""?>">
             <div> <?php echo (isset($errorEmail))? $errorEmail: "" ?> </div>
             <input class="controls" required type="email" name="email" placeholder="Email *" value="<?php echo (isset($user["email"]))? $user["email"]: ""?>">
             <div> <?php echo (isset($errorPassword))? $errorPassword: "";?> </div>
