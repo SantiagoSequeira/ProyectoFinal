@@ -1,9 +1,6 @@
 <?php
   session_start();
   $pagina = "";
-  if (isset($_GET["k"])){
-    logOut();
-  }
   function issetUser(){
     if(isset($_SESSION["user"])){
       return true;
@@ -22,7 +19,7 @@
     redir();
   }
   function getUsersArray(){
-    $file = file_get_contents("users.json");
+    $file = file_get_contents("json/users.json");
     if (!$file){
       return false;
     }
@@ -138,7 +135,7 @@
       $array = getUsersArray();
       $array [] = $user;
       $json = json_encode($array);
-      file_put_contents("users.json",$json);
+      file_put_contents("json/users.json",$json);
       $_SESSION["user"] = [
         "id" => $user["id"],
         "email" => $user["email"],
@@ -173,7 +170,7 @@
         ];
       $array[$id] = $usuario;
       $json = json_encode($array);
-      file_put_contents("users.json",$json);
+      file_put_contents("json/users.json",$json);
       $_SESSION["user"] = [
         "id" => $_SESSION["user"]["id"],
         "email" => $user["email"],

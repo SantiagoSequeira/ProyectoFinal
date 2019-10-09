@@ -1,5 +1,5 @@
 <?php
-  require_once("functions.php");
+  require_once("functions/functions.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,15 +10,5 @@
   <link href="https://fonts.googleapis.com/css?family=Manjari|Pacifico|Roboto+Slab&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <title>MyEcommerce</title>
-  <script type="text/javascript">
-  function show() {
-    var x = document.getElementById("menu");
-    var y = document.getElementById("hamb");
-    if (x.style.display === "none") {
-      x.style.display = "flex";
-    } else {
-      x.style.display = "none";
-    }
-    }
-  </script>
+  <script type="text/javascript" src="js/functions.js"></script>
 </head>

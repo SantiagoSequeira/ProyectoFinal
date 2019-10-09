@@ -1,5 +1,5 @@
 <?php
-  require_once("functions.php");
+  require_once("functions/functions.php");
 
    if (!issetUser()){
      redir("login");
@@ -12,7 +12,7 @@
      $errorEmail = $errors["email"];
      $errorPassword = $errors["password"];
      $errorTyC = $errors["tyc"];
-    
+
    }
    require_once("header.php");
    $pagina = "profile";

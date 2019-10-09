@@ -8,40 +8,34 @@
       <?php include_once("menu.php"); ?>
     </header>
     <main>
-      <div class="faqtitulo">
-       <h2> Frequently Asked Questions</h2>
-     </div>
-     <div class="faqmenu">
-       <a href="#Q1">Question1?</a>
-       <a href="#Q2">Question2?</a>
-       <a href="#Q3">Question3?</a>
-       <a href="#Q4">Question4?</a>
-       <a href="#Q5">Question5?</a>
-       <a href="#Q6">Question6?</a>
-       <a href="#Q7">Question7?</a>
-       <a href="#Q8">Question8?</a>
-     </div>
-     <div class="hquestions">
-       <div class="row1">
-        <h3 id="Q1" >Question1?</h3>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-       <h3 id="Q2">Question2?</h3>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-       <h3 id="Q3">Question3?</h3>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-       <h3 id="Q4">Question4?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="faq-background">
+        <dl class="ask">
+          <dt onclick="answer('id-1')" class="faq-titulo">Who we are?</dt>
+          <dd class="answer" id="id-1" style="display: none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+          </dd>
+        </dl>
+        <dl class="ask">
+          <dt onclick="answer('id-2')" class="faq-titulo">How to buy?</dt>
+          <dd class="answer" id="id-2" style="display: none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </dd>
+        </dl>
+        <dl class="ask">
+          <dt onclick="answer('id-3')" class="faq-titulo">What credit cards do we accept?</dt>
+          <dd class="answer" id="id-3" style="display: none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </dd>
+        </dl>
+        <div class="boton edit-faq">
+          <a href="editFaq.php"><button class="boton1" type="button" name="button">Edit</button></a>
+        </div>
+          <!-- <dt onclick="answer('id-2')">Coffee</dt>
+          <dd class="answer" id="id-2" style="display: none">Black hot drink</dd>
+          <dt onclick="answer('id-3')">Coffee</dt>
+          <dd class="answer" id="id-3" style="display: none">Black hot drink</dd>
+        </dl> -->
       </div>
-    <div class="row2">
-      <h3 id="Q5">Question5?</h3>
-       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-     <h3 id="Q6">Question6?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-     <h3 id="Q7">Question7?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-     <h3 id="Q8">Question8?</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-   </div>
- </main>
+
+      </main>
 <?php require_once("./footer.php"); ?>
