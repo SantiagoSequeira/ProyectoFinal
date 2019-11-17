@@ -1,7 +1,7 @@
 <?php
 	abstract class Core {
 		static function getProductos(int $base, int $limit=3, string $search=""){
-			$query = DB::open()->prepare("SELECT productos.id, productos.nombre, precio, marca, categoria, descripcion, stock, imagen FROM productos LEFT JOIN marcas ON productos.marca = marcas.id WHERE productos.nombre LIKE :search OR marcas.nombre LIKE :search  LIMIT :max OFFSET :base");
+			$query = DB::open()->prepare("SELECT productos.id, productos.nombre, precio, marca, categoria, descripcion, stock, imagen FROM productos LEFT JOIN marcas ON productos.marca = marcas.id LEFT JOIN categorias ON productos.categoria = categorias.id WHERE productos.nombre LIKE :search OR marcas.nombre LIKE :search OR categorias.nombre LIKE :search LIMIT :max OFFSET :base");
 			$query->bindValue("search","%$search%");
 			$query->bindValue("max",(int) $limit, PDO::PARAM_INT);
 			$query->bindValue("base", (int) $base, PDO::PARAM_INT);
