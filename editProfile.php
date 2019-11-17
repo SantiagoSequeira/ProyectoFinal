@@ -1,21 +1,18 @@
 <?php
-  require_once("functions/functions.php");
-
-   if (!issetUser()){
-     redir("login");
-   }
-   if($_POST){
-     $check = editUser($_POST);
-     $user = $check["user"];
-     $errors = $check["errors"];
+  require_once("header.php");
+  $pagina = "profile";
+ if($_POST){
+   $res = Validador::modificarUsuario($_POST);
+   if($res === true){
+     Core::redir("profile");
+   } else {
+     $errors = $res;
      $errorNombre= $errors["nombre"];
      $errorEmail = $errors["email"];
      $errorPassword = $errors["password"];
-     $errorTyC = $errors["tyc"];
-
    }
-   require_once("header.php");
-   $pagina = "profile";
+ }
+
 ?>
 <body>
   <div class="container">
@@ -27,19 +24,19 @@
         <h4>Edit my profile</h4>
         <form class="editForm" action="" method="post" enctype="multipart/form-data">
           <div class="avatarForm">
-            <label for="avatar"><img class="round-img" src="img/avatares/<?=$_SESSION["user"]["avatar"]?>" alt="foto de perfil" ></label>
+            <label for="avatar"><img class="round-img" src="img/avatares/<?=$usuario->getAvatar()?>" alt="foto de perfil" ></label>
             <input type="file" name="avatar" id="avatar">
           </div>
           <div class="inputsForm">
-            <div> <?php echo (isset($errorNombre)) ? $errorNombre : "" ?> </div>
-            <input class="controls" type="text"   name="nombre" placeholder="Name *" value="<?php echo (isset($user["nombre"]))? $user["nombre"]: $_SESSION["user"]["name"] ?>">
-            <input class="controls" type="text" name="apellido" placeholder="Surname" value="<?php echo (isset($user["apellido"]))? $user["surname"]: $_SESSION["user"]["surname"] ?>">
-            <div> <?php echo (isset($errorEmail))? $errorEmail: "" ?> </div>
-            <input class="controls"   type="email" name="email" placeholder="Email *" value="<?php echo (isset($user["email"]))? $user["email"]: $_SESSION["user"]["email"]?>">
-            <div> <?php echo (isset($errorPassword))? $errorPassword: "";?> </div>
+            <input type="text" name="id" value="<?=$usuario->getId()?>" hidden style="display=none">
+            <input type="text" name="lastAvatar" value="<?=$usuario->getAvatar()?>" hidden style="display=none">
+            <div class="error-reg"> <?php echo (isset($errorNombre)) ? $errorNombre : "" ?> </div>
+            <input class="controls" type="text"   name="nombre" placeholder="Name *" value="<?=$usuario->getNombre()?>">
+            <input class="controls" type="text" name="apellido" placeholder="Surname" value="<?=$usuario->getApellido()?>">
+            <div class="error-reg"> <?php echo (isset($errorEmail))? $errorEmail: "" ?> </div>
+            <input class="controls"   type="email" name="email" placeholder="Email *" value="<?=$usuario->getEmail()?>">
+            <div class="error-reg"> <?php echo (isset($errorPassword))? $errorPassword: "";?> </div>
             <input class="controls" type="password" name="password" placeholder="Password for save changes">
-            <div> <?php echo (isset($errorTyC))? $errorTyC: "";?> </div>
-
           </div>
           <input  class="botons" type="submit" value="Save">
         </form>

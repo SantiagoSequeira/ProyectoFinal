@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-11-2019 a las 16:28:22
+-- Tiempo de generación: 17-11-2019 a las 18:52:13
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.1.32
 
@@ -64,8 +64,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id`, `nombre`, `apellido`, `email`, `password`, `avatar`, `tipo`) VALUES
-(1, 'Santiago', 'Santiago', 'santiago@sequeira.ml', '21106275', 'default.jpg', 0),
-(14, 'Santy', 'Sequeira', 'arroba@correo.ml', '21106275', 'default.png', 1);
+(16, 'Santiago', 'Sequeira', 'santiago@sequeira.ml', '$2y$10$Gh2T.gJxFEKNFn2djL.ymenTzrDUj48f3z3E8SVPzGIlUC9DEkU8C', '13122SantiagoEzequiel.png', 0);
 
 -- --------------------------------------------------------
 
@@ -169,7 +168,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `marcas`

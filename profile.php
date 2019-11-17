@@ -1,10 +1,10 @@
 <?php
-  require_once("functions/functions.php");
-  if (!issetUser()){
-    redir("login");
-  }
   require_once("header.php");
   $pagina = "profile";
+  if(!$usuario){
+    Core::redir();
+  }
+
 ?>
 <body>
   <div class="container">
@@ -14,11 +14,11 @@
       <div class="profile">
         <h2 >Mi Perfil</h2>
         <div class="perfilBasico">
-          <img src="img/avatares/<?=$_SESSION["user"]["avatar"]?>" alt="foto de perfil" class="foto-perfil">
+          <img src="img/avatares/<?=$usuario->getAvatar()?>" alt="foto de perfil" class="foto-perfil">
           <div class="user-datos">
-            <h2 class="NombreC"><?=$_SESSION["user"]["name"]?></h2>
-            <h2 class="NombreC"><?=$_SESSION["user"]["surname"]?></h2>
-            <h4 class="emailU"><?=$_SESSION["user"]["email"]?></h4>
+            <h2 class="NombreC"><?=$usuario->getNombre()?></h2>
+            <h2 class="NombreC"><?=$usuario->getApellido()?></h2>
+            <h4 class="emailU"><?=$usuario->getEmail()?></h4>
             <div class="boton">
               <a href="editProfile.php"><button class="boton1" type="button" name="button">Editar</button></a>
             </div>

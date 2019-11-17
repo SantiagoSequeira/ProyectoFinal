@@ -3,6 +3,7 @@
 	if(Core::isLogIn() == "usuario"){
 		$usuario = unserialize($_SESSION["Usuario"]);
 	} else if(Core::isLogIn() == "administrador"){
+		$usuario= unserialize($_SESSION["Administrador"]);
 		$admin = unserialize($_SESSION["Administrador"]);
 	}
 	if(isset($_SESSION["Carrito"])){
