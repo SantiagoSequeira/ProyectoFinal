@@ -1,0 +1,13 @@
+	<?php
+	require_once("clases/Carrito.php");
+	require_once("clases/Usuario.php");
+	require_once("clases/Cliente.php");
+	require_once("clases/Administrador.php");
+	require_once("clases/Producto.php");
+	require_once("clases/Pago.php");
+	require_once("clases/Tarjeta.php");
+	require_once("clases/DB.php");
+	require_once("clases/Core.php");
+	require_once("clases/Validador.php");
+	session_start();
+	?>

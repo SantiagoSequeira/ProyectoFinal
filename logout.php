@@ -1,4 +1,9 @@
 <?php
-  require_once("functions/functions.php");
-  logOut();
+	require_once("launcher.php");
+if(Core::isLogIn()){
+	Validador::logOut();
+} else {
+	header("Location: index.php");
+}
+
  ?>

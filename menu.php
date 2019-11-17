@@ -10,26 +10,32 @@
             if(!($pagina == "cart")) {?>
               <li><a href="cart.php">Cart</a></li>
             <?php  }
-            if (!(issetUser()) && !($pagina == "login") && !($pagina == "register")) {?>
+            if (!(Core::isLogIn()) && !($pagina == "login") && !($pagina == "register")) {?>
               <li><a href="login.php">Login</a></li>
               <li><a href="register.php">Register</a></li>
             <?php }
-            if ($pagina == "login" && !(issetUser())) {?>
+            if ($pagina == "login" && !(Core::isLogIn())) {?>
               <li><a href="register.php">Register</a></li>
             <?php }
-            if ($pagina == "register" && !(issetUser())) {?>
+            if ($pagina == "register" && !(Core::isLogIn())) {?>
              <li><a href="login.php">Login</a></li>
             <?php } ?>
            <div class="log-profile">
-             <?php if (issetUser()) {?>
+             <?php if (Core::isLogIn()) {
+                if(isset($admin) && !($pagina == "admin")){?>
+                  <li>
+                    <a href="admin.php">Admin</a>
+                  </li>
+                <?php } ?>
                <li>
                  <form class="" action="logout.php" method="post">
                    <input type="submit" name="logout" value="Log out" class="log-out">
                  </form>
                </li>
+
              <?php }
-            if (issetUser() && ($pagina != "profile")) {?>
-              <li><a href="profile.php"><img src="img/avatares/<?=$_SESSION["user"]["avatar"]?>" alt="" class="img-user"></a></li>
+            if (Core::isLogIn() && ($pagina != "profile")) {?>
+              <li><a href="profile.php"><img src="img/avatares/<?php if(isset($usuario)){echo $usuario->getAvatar();} else if(isset($admin)){echo $admin->getAvatar();}?>" alt="" class="img-user"></a></li>
               <?php }?>
             </div>
           </ul>
@@ -37,12 +43,12 @@
             <a id="hamb" onclick="show()"><ion-icon name="menu"></ion-icon></a>
           </div>
           <div class="botonera" id="menu" style="display: none;">
-            <?php if (!(issetUser()) && !($pagina == "login")) {?>
+            <?php if (!(Core::isLogIn()) && !($pagina == "login")) {?>
               <a href="login.php"><ion-icon name="log-in"></ion-icon></a>
-              <?php } else if (issetUser() && !($pagina == "profile")){?>
+              <?php } else if (Core::isLogIn() && !($pagina == "profile")){?>
                 <a href="profile.php"><ion-icon name="person"></ion-icon></a>
               <?php }
-            if(issetUser()){ ?>
+            if(Core::isLogIn()){ ?>
               <a href="logout.php"><ion-icon name="log-out"></ion-icon></a>
             <?php }
             if(!($pagina == "faq")) { ?>

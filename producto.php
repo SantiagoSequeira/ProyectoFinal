@@ -1,6 +1,22 @@
 <?php
-  require_once("header.php");
-  $pagina = "producto";
+	require_once("header.php");
+	$pagina = "producto";
+	if(isset($_GET["id"])){
+		$id = $_GET["id"];
+		$producto = Core::getProductoPorID($id);
+		if(!$producto){
+
+			Core::redir();
+		}
+	} else {
+		Core::redir("cart");
+	}
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    	unset($_POST);
+		$carrito->agregarProducto($producto);
+		$_SESSION["Carrito"] = serialize($carrito);
+    	Core::redir("cart");
+	}
 ?>
 <body>
   <div class="container">
@@ -10,23 +26,32 @@
     <main>
       <div class="product-container">
         <div class="producto">
-          <img src="img/IX.jpg" alt="" class="img-producto">
+          <img src="img/productos/<?=$producto->getImagen()?>" alt="" class="img-producto">
         </div>
         <div class="descripcion-producto">
-          <h2>Product title</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <h2><?=$producto->getNombre()?> - <i><?=Core::getMarca($producto->getMarca())?></i></h2>
+
+          <p class="">
+            <?=$producto->getDescripcion()?>
           </p>
+			<h4><i class="stock">Stock: <?php echo ($producto->getStock() > 0) ? "Disponible" : "No disponible";?></i></h4>
           <h3 class="price">
-            $70.000,00
+            $<?=$producto->getPrecio()?>
           </h3>
+
           <a href="">
-            <h5 class="add-cart">
-              Add to cart
-            </h5>
+			  <form action="" method="post">
+				  <button type="submit" class="add-cart">
+					  <!--<h5 class="add-cart">-->
+              			Add to cart
+            			<!--</h5>-->
+				  </button>
+
+			  </form>
+
           </a>
         </div>
 
       </div>
     </main>
-<?php require_once("./footer.php"); ?>
+<?php require_once("footer.php"); ?>
